@@ -1,13 +1,77 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(to right, #c6e6fd, #dff3c7);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Main container in row */
+.counter-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #2c3e50;
+  animation: fadeIn 1s ease-out;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* space between counters */
+  margin-top: 40px;
+}
+
+/* Round button style */
+.round-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.round-btn:hover {
+  background-color: #2980b9;
+}
+
+.class-counter-Container{
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
 }
